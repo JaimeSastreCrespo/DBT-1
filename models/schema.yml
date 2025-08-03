@@ -20,6 +20,9 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__customers')
+              field: customer_id
 
   - name: stg_orders
     description: This model cleans up order data
